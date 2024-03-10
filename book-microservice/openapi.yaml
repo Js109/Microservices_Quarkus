@@ -1,0 +1,46 @@
+---
+openapi: 3.0.3
+info:
+  title: Book API
+  description: Creates books
+  version: "1.0"
+tags:
+- name: Book REST Endpoint
+paths:
+  /api/books:
+    post:
+      tags:
+      - Book REST Endpoint
+      summary: Creates a book
+      description: Creates a Book with an ISBN number
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Book'
+      responses:
+        "200":
+          description: OK
+components:
+  schemas:
+    Book:
+      description: This is a book
+      required:
+      - isbn_10
+      - title
+      type: object
+      properties:
+        author:
+          type: string
+        creation_date:
+          type: string
+        genre:
+          type: string
+        isbn_10:
+          type: string
+          nullable: false
+        title:
+          type: string
+        yearOfPublication:
+          format: int32
+          type: integer

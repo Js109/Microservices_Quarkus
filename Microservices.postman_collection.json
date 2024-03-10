@@ -1,0 +1,62 @@
+{
+	"info": {
+		"_postman_id": "1ab8f037-c974-4004-9a91-31b30ad57d32",
+		"name": "Microservices",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33137903"
+	},
+	"item": [
+		{
+			"name": "Add Book",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"author\": \"Julian\",\r\n    \"genre\": \"IT\",\r\n    \"title\": \"Quarkus Microservices Book\",\r\n    \"yearOfPublication\": 2024\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8702/api/books",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8702",
+					"path": [
+						"api",
+						"books"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Numbers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8701/api/number",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8701",
+					"path": [
+						"api",
+						"number"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

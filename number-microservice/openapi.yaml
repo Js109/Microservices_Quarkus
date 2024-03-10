@@ -1,0 +1,36 @@
+---
+openapi: 3.0.3
+info:
+  title: Number Microservice for demonstration purposes
+  description: This microservice generates ISBN book number
+  version: "1.0"
+tags:
+- name: api
+  description: Public API that can be used by anybody
+- name: number
+  description: Public API for random ISBN generation
+- name: ISBN Number REST Endpoint
+paths:
+  /api/number:
+    get:
+      tags:
+      - ISBN Number REST Endpoint
+      summary: Generates book number
+      description: ISBN 10 number
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/IsbnNumber'
+components:
+  schemas:
+    IsbnNumber:
+      description: ISBN10 number for books
+      required:
+      - isbn_10
+      type: object
+      properties:
+        isbn_10:
+          type: string

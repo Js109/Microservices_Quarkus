@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>practice.julian.microservices</groupId>
+  <artifactId>quarkus-microservices</artifactId>
+  <packaging>pom</packaging>
+  <version>1.0</version>
+  <name>Microservices POC with Quarkus</name>
+  <modules>
+    <module>book-microservice</module>
+    <module>number-microservice</module>
+  </modules>
+</project>
